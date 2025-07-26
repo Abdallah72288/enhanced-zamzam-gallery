@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>زمزم - معرض فاخر للصور والفيديوهات المحسن</title>
+    <title>زمزم - معرض فاخر للصور والفيديوهات</title>
     <meta name="description" content="معرض زمزم الفاخر للصور والفيديوهات مع تقنيات متطورة وتأثيرات بصرية مذهلة وتخزين سحابي">
     <meta name="keywords" content="معرض, صور, فيديو, زمزم, تصوير, فن, تقنيات متطورة, تخزين سحابي">
-    <meta name="author" content="Zamzam Gallery Enhanced">
+    <meta name="author" content="Abdallah">
     
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="زمزم - معرض فاخر للصور والفيديوهات المحسن">
+    <meta property="og:title" content="زمزم - معرض فاخر للصور والفيديوهات">
     <meta property="og:description" content="معرض زمزم الفاخر للصور والفيديوهات مع تقنيات متطورة وتأثيرات بصرية مذهلة وتخزين سحابي">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://zamzam-gallery-enhanced.com">
+    <meta property="og:url" content="https://zamzam-gallery-abdallah.com">
     <meta property="og:image" content="./assets/og-image.jpg">
     
     <!-- Favicon -->
@@ -41,9 +41,9 @@
     
     <!-- Service Worker -->
     <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('./sw.js');
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker.register("./sw.js");
             });
         }
     </script>
@@ -55,13 +55,13 @@
             <div class="logo-container">
                 <div class="logo-circle">
                     <div class="shiny-text">زمزم</div>
-                    <div class="logo-subtitle">ZAMZAM ENHANCED</div>
+                    <div class="logo-subtitle">Abdallah</div>
                 </div>
             </div>
             <div class="loading-bar">
                 <div class="loading-progress"></div>
             </div>
-            <div class="loading-text">جاري تحميل المعرض المحسن...</div>
+            <div class="loading-text">جاري تحميل المعرض...</div>
         </div>
     </div>
 
@@ -77,7 +77,7 @@
                         <div class="shiny-text">زمزم</div>
                     </div>
                     <div class="logo-text">
-                        <h1 class="shiny-text">معرض زمزم المحسن</h1>
+                        <h1 class="shiny-text">معرض زمزم - Abdallah</h1>
                         <p>حيث تلتقي التقنية بالجمال والإبداع</p>
                     </div>
                 </div>
@@ -364,68 +364,62 @@
                     
                     <!-- URL Upload -->
                     <div id="url-upload" class="upload-panel">
-                        <div class="url-input-container">
-                            <input type="url" id="url-input" placeholder="أدخل رابط الصورة أو الفيديو">
-                            <button id="fetch-url" class="glass-btn">جلب</button>
+                        <div class="form-group">
+                            <label for="url-input">رابط الملف</label>
+                            <div class="url-input-container">
+                                <input type="url" id="url-input" placeholder="أدخل رابط الصورة أو الفيديو هنا...">
+                                <button class="glass-btn primary small" id="fetch-url-btn">جلب</button>
+                            </div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="upload-metadata">
                     <div class="form-group">
-                        <label for="media-title">العنوان</label>
-                        <input type="text" id="media-title" placeholder="عنوان الملف">
+                        <label for="upload-title">العنوان</label>
+                        <input type="text" id="upload-title" placeholder="عنوان الصورة أو الفيديو">
                     </div>
-                    
                     <div class="form-group">
-                        <label for="media-description">الوصف</label>
-                        <textarea id="media-description" placeholder="وصف الملف" rows="3"></textarea>
+                        <label for="upload-description">الوصف</label>
+                        <textarea id="upload-description" placeholder="وصف تفصيلي للمحتوى..."></textarea>
                     </div>
-                    
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="media-category">التصنيف</label>
-                            <select id="media-category">
-                                <option value="عام">عام</option>
-                                <option value="طبيعة">طبيعة</option>
-                                <option value="فن">فن</option>
-                                <option value="تصوير">تصوير</option>
-                                <option value="معمارية">معمارية</option>
-                                <option value="طعام">طعام</option>
+                            <label for="upload-category">التصنيف</label>
+                            <select id="upload-category">
+                                <option value="">اختر تصنيف</option>
+                                <option value="nature">طبيعة</option>
+                                <option value="architecture">معمارية</option>
+                                <option value="art">فن</option>
+                                <option value="food">طعام</option>
+                                <option value="travel">سفر</option>
+                                <option value="people">أشخاص</option>
+                                <option value="technology">تقنية</option>
                             </select>
                         </div>
-                        
                         <div class="form-group">
-                            <label for="media-brand">العلامة التجارية</label>
-                            <select id="media-brand">
-                                <option value="">اختر العلامة التجارية</option>
-                                <option value="كانون">كانون</option>
-                                <option value="نيكون">نيكون</option>
-                                <option value="سوني">سوني</option>
-                                <option value="فوجي">فوجي</option>
-                                <option value="أوليمبوس">أوليمبوس</option>
-                            </select>
+                            <label for="upload-brand">العلامة التجارية</label>
+                            <input type="text" id="upload-brand" placeholder="اسم العلامة التجارية (اختياري)">
                         </div>
                     </div>
-                    
                     <div class="form-group">
-                        <label for="media-tags">العلامات</label>
-                        <input type="text" id="media-tags" placeholder="أدخل العلامات مفصولة بفواصل">
+                        <label for="upload-tags">العلامات</label>
+                        <input type="text" id="upload-tags" placeholder="علامات مفصولة بفاصلة (مثال: سماء, غيوم, جبال)">
                     </div>
                 </div>
             </div>
             
             <div class="modal-footer">
-                <button id="upload-submit" class="glass-btn primary">رفع الملفات</button>
-                <button class="close-modal glass-btn">إلغاء</button>
+                <button class="glass-btn" id="cancel-upload-btn">إلغاء</button>
+                <button class="glass-btn primary" id="submit-upload-btn">رفع الملفات</button>
             </div>
         </div>
     </div>
 
     <!-- Settings Modal -->
-    <div id="settings-modal" class="modal">
+    <div id="settings-modal" class="modal large">
         <div class="modal-overlay"></div>
-        <div class="modal-content large">
+        <div class="modal-content">
             <div class="modal-header">
                 <h3>إعدادات المعرض</h3>
                 <button class="close-modal">✕</button>
@@ -436,7 +430,7 @@
                     <button class="settings-tab active" data-tab="appearance">المظهر</button>
                     <button class="settings-tab" data-tab="cloud">السحابة</button>
                     <button class="settings-tab" data-tab="performance">الأداء</button>
-                    <button class="settings-tab" data-tab="social">التواصل</button>
+                    <button class="settings-tab" data-tab="communication">التواصل</button>
                 </div>
                 
                 <div class="settings-content">
@@ -477,19 +471,17 @@
                             <h4>التأثيرات</h4>
                             <div class="toggle-group">
                                 <label class="toggle">
-                                    <input type="checkbox" id="sound-toggle" checked>
+                                    <input type="checkbox" id="toggle-sounds" checked>
                                     <span class="toggle-slider"></span>
                                     <span class="toggle-label">الأصوات</span>
                                 </label>
-                                
                                 <label class="toggle">
-                                    <input type="checkbox" id="particles-toggle" checked>
+                                    <input type="checkbox" id="toggle-particles" checked>
                                     <span class="toggle-slider"></span>
                                     <span class="toggle-label">الجسيمات</span>
                                 </label>
-                                
                                 <label class="toggle">
-                                    <input type="checkbox" id="animations-toggle" checked>
+                                    <input type="checkbox" id="toggle-animations" checked>
                                     <span class="toggle-slider"></span>
                                     <span class="toggle-label">الحركات</span>
                                 </label>
@@ -502,31 +494,29 @@
                         <div class="setting-group">
                             <h4>مزودي الخدمة السحابية</h4>
                             <div class="cloud-config">
-                                <div class="cloud-service">
+                                <div class="cloud-service" data-provider="google">
                                     <div class="service-info">
                                         <span class="service-icon">📱</span>
                                         <span class="service-name">Google Drive</span>
                                         <span class="service-status disconnected">غير متصل</span>
                                     </div>
-                                    <button class="connect-btn glass-btn small">ربط</button>
+                                    <button class="glass-btn small connect-cloud-btn" data-provider="google">ربط</button>
                                 </div>
-                                
-                                <div class="cloud-service">
+                                <div class="cloud-service" data-provider="dropbox">
                                     <div class="service-info">
                                         <span class="service-icon">📦</span>
                                         <span class="service-name">Dropbox</span>
                                         <span class="service-status disconnected">غير متصل</span>
                                     </div>
-                                    <button class="connect-btn glass-btn small">ربط</button>
+                                    <button class="glass-btn small connect-cloud-btn" data-provider="dropbox">ربط</button>
                                 </div>
-                                
-                                <div class="cloud-service">
+                                <div class="cloud-service" data-provider="onedrive">
                                     <div class="service-info">
                                         <span class="service-icon">☁️</span>
                                         <span class="service-name">OneDrive</span>
                                         <span class="service-status disconnected">غير متصل</span>
                                     </div>
-                                    <button class="connect-btn glass-btn small">ربط</button>
+                                    <button class="glass-btn small connect-cloud-btn" data-provider="onedrive">ربط</button>
                                 </div>
                             </div>
                         </div>
@@ -535,13 +525,12 @@
                             <h4>إعدادات المزامنة</h4>
                             <div class="toggle-group">
                                 <label class="toggle">
-                                    <input type="checkbox" id="auto-sync-toggle">
+                                    <input type="checkbox" id="toggle-auto-sync">
                                     <span class="toggle-slider"></span>
                                     <span class="toggle-label">مزامنة تلقائية</span>
                                 </label>
-                                
                                 <label class="toggle">
-                                    <input type="checkbox" id="backup-toggle">
+                                    <input type="checkbox" id="toggle-backup">
                                     <span class="toggle-slider"></span>
                                     <span class="toggle-label">نسخ احتياطي</span>
                                 </label>
@@ -555,8 +544,8 @@
                             <h4>جودة الصور</h4>
                             <div class="quality-options">
                                 <button class="quality-option" data-quality="low">منخفضة</button>
-                                <button class="quality-option active" data-quality="medium">متوسطة</button>
-                                <button class="quality-option" data-quality="high">عالية</button>
+                                <button class="quality-option" data-quality="medium">متوسطة</button>
+                                <button class="quality-option active" data-quality="high">عالية</button>
                                 <button class="quality-option" data-quality="original">أصلية</button>
                             </div>
                         </div>
@@ -565,13 +554,12 @@
                             <h4>التحميل</h4>
                             <div class="toggle-group">
                                 <label class="toggle">
-                                    <input type="checkbox" id="lazy-loading-toggle" checked>
+                                    <input type="checkbox" id="toggle-lazy-load" checked>
                                     <span class="toggle-slider"></span>
                                     <span class="toggle-label">تحميل تدريجي</span>
                                 </label>
-                                
                                 <label class="toggle">
-                                    <input type="checkbox" id="preload-toggle">
+                                    <input type="checkbox" id="toggle-preload">
                                     <span class="toggle-slider"></span>
                                     <span class="toggle-label">تحميل مسبق</span>
                                 </label>
@@ -579,34 +567,30 @@
                         </div>
                     </div>
                     
-                    <!-- Social Settings -->
-                    <div id="social-settings" class="settings-panel">
+                    <!-- Communication Settings -->
+                    <div id="communication-settings" class="settings-panel">
                         <div class="setting-group">
                             <h4>روابط التواصل الاجتماعي</h4>
                             <div class="social-links">
                                 <div class="form-group">
-                                    <label>فيسبوك</label>
-                                    <input type="url" id="facebook-link" placeholder="https://facebook.com/yourpage">
+                                    <label for="facebook-link">فيسبوك</label>
+                                    <input type="url" id="facebook-link" placeholder="رابط صفحة الفيسبوك">
                                 </div>
-                                
                                 <div class="form-group">
-                                    <label>إنستغرام</label>
-                                    <input type="url" id="instagram-link" placeholder="https://instagram.com/yourpage">
+                                    <label for="instagram-link">إنستغرام</label>
+                                    <input type="url" id="instagram-link" placeholder="رابط صفحة الإنستغرام">
                                 </div>
-                                
                                 <div class="form-group">
-                                    <label>تويتر</label>
-                                    <input type="url" id="twitter-link" placeholder="https://twitter.com/yourpage">
+                                    <label for="twitter-link">تويتر</label>
+                                    <input type="url" id="twitter-link" placeholder="رابط صفحة تويتر">
                                 </div>
-                                
                                 <div class="form-group">
-                                    <label>يوتيوب</label>
-                                    <input type="url" id="youtube-link" placeholder="https://youtube.com/yourchannel">
+                                    <label for="youtube-link">يوتيوب</label>
+                                    <input type="url" id="youtube-link" placeholder="رابط قناة اليوتيوب">
                                 </div>
-                                
                                 <div class="form-group">
-                                    <label>واتساب</label>
-                                    <input type="tel" id="whatsapp-link" placeholder="+966xxxxxxxxx">
+                                    <label for="whatsapp-link">واتساب</label>
+                                    <input type="url" id="whatsapp-link" placeholder="رقم الواتساب (مع رمز الدولة)">
                                 </div>
                             </div>
                         </div>
@@ -615,48 +599,68 @@
             </div>
             
             <div class="modal-footer">
-                <button id="save-settings" class="glass-btn primary">حفظ الإعدادات</button>
-                <button class="close-modal glass-btn">إلغاء</button>
+                <button class="glass-btn" id="cancel-settings-btn">إلغاء</button>
+                <button class="glass-btn primary" id="save-settings-btn">حفظ الإعدادات</button>
             </div>
         </div>
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer glass-effect">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>معرض زمزم المحسن</h4>
-                    <p>حيث تلتقي التقنية بالجمال والإبداع في عالم التصوير الرقمي</p>
+                    <h4>معرض زمزم - Abdallah</h4>
+                    <p>معرض الصور والفيديوهات الفاخر الذي يجمع بين التصميم الأنيق والوظائف المتقدمة، مع دعم التخزين السحابي والذكاء الاصطناعي.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><span class="icon">🌐</span></a>
+                        <a href="#" class="social-icon"><span class="icon">📧</span></a>
+                        <a href="#" class="social-icon"><span class="icon">🐙</span></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="#">الرئيسية</a></li>
+                        <li><a href="#">المعرض</a></li>
+                        <li><a href="#">الرفع</a></li>
+                        <li><a href="#">الإعدادات</a></li>
+                        <li><a href="#">اتصل بنا</a></li>
+                    </ul>
                 </div>
                 
                 <div class="footer-section">
                     <h4>الميزات</h4>
                     <ul>
-                        <li>تخزين سحابي متقدم</li>
-                        <li>تحسين بالذكاء الاصطناعي</li>
-                        <li>معرض ثلاثي الأبعاد</li>
-                        <li>مزامنة تلقائية</li>
+                        <li><a href="#">التخزين السحابي</a></li>
+                        <li><a href="#">المعرض ثلاثي الأبعاد</a></li>
+                        <li><a href="#">البحث المتقدم</a></li>
+                        <li><a href="#">تطبيق PWA</a></li>
+                        <li><a href="#">تحسين AI</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
                     <h4>تواصل معنا</h4>
-                    <div class="social-icons" id="footer-social">
-                        <!-- Social icons will be dynamically inserted -->
-                    </div>
+                    <p>إذا كان لديك أي أسئلة أو استفسارات، فلا تتردد في التواصل معنا.</p>
+                    <p>البريد الإلكتروني: support@zamzam-gallery.com</p>
+                    <p>الهاتف: +123 456 7890</p>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2024 معرض زمزم المحسن. جميع الحقوق محفوظة.</p>
-                <p>تم التطوير بواسطة Manus AI</p>
+                <p>© 2025 معرض زمزم - Abdallah. جميع الحقوق محفوظة.</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- Notifications Container -->
+    <div id="notifications-container"></div>
+
+    <!-- Main Script -->
     <script src="./js/script.js"></script>
+    <script src="./js/cloud-storage.js"></script>
 </body>
 </html>
 

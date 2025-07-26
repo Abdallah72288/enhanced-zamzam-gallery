@@ -1,5 +1,5 @@
 {
-  "name": "معرض زمزم المحسن",
+  "name": "معرض زمزم - Abdallah",
   "short_name": "زمزم",
   "description": "معرض فاخر للصور والفيديوهات مع تقنيات متطورة وتخزين سحابي",
   "version": "2.0.0",
@@ -104,7 +104,7 @@
   "related_applications": [
     {
       "platform": "webapp",
-      "url": "https://zamzam-gallery-enhanced.com/manifest.json"
+      "url": "https://zamzam-gallery-abdallah.com/manifest.json"
     }
   ],
   "prefer_related_applications": false,
